@@ -10,7 +10,7 @@ function App() {
   const [todos, setTodos] = useState([])
   const [showFinished, setshowFinished] = useState(true)
 
-  // ✅ Load todos from localStorage on first render
+  // Load todos from localStorage on first render
   useEffect(() => {
     let todoString = localStorage.getItem("todos")
     if(todoString){
@@ -19,7 +19,7 @@ function App() {
     }
   }, [])
   
-  // ✅ Helper function to save updated todos
+  // Helper function to save updated todos
   const saveToLS = (updatedTodos) => {
     localStorage.setItem("todos", JSON.stringify(updatedTodos))
   }
